@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53B3B0FD2A65ED7E009EFF48 /* SwiftMultiPlatformDarwinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3B0FC2A65ED7E009EFF48 /* SwiftMultiPlatformDarwinApp.swift */; };
+		53B3B0FF2A65ED7E009EFF48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3B0FE2A65ED7E009EFF48 /* ContentView.swift */; };
+		53B3B1012A65ED7F009EFF48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53B3B1002A65ED7F009EFF48 /* Assets.xcassets */; };
+		53B3B1052A65ED7F009EFF48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53B3B1042A65ED7F009EFF48 /* Preview Assets.xcassets */; };
+		53B3B10F2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3B10E2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests.swift */; };
+		53B3B1192A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3B1182A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests.swift */; };
+		53B3B11B2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3B11A2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITestsLaunchTests.swift */; };
+		53B3B12B2A65EEA8009EFF48 /* MultiPlatformSharedLib in Frameworks */ = {isa = PBXBuildFile; productRef = 53B3B12A2A65EEA8009EFF48 /* MultiPlatformSharedLib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53B3B10B2A65ED7F009EFF48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53B3B0F12A65ED7D009EFF48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53B3B0F82A65ED7D009EFF48;
+			remoteInfo = SwiftMultiPlatformDarwin;
+		};
+		53B3B1152A65ED7F009EFF48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53B3B0F12A65ED7D009EFF48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53B3B0F82A65ED7D009EFF48;
+			remoteInfo = SwiftMultiPlatformDarwin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		53B3B0F92A65ED7E009EFF48 /* SwiftMultiPlatformDarwin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMultiPlatformDarwin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B3B0FC2A65ED7E009EFF48 /* SwiftMultiPlatformDarwinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMultiPlatformDarwinApp.swift; sourceTree = "<group>"; };
+		53B3B0FE2A65ED7E009EFF48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		53B3B1002A65ED7F009EFF48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53B3B1022A65ED7F009EFF48 /* SwiftMultiPlatformDarwin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftMultiPlatformDarwin.entitlements; sourceTree = "<group>"; };
+		53B3B1042A65ED7F009EFF48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		53B3B10A2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMultiPlatformDarwinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B3B10E2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMultiPlatformDarwinTests.swift; sourceTree = "<group>"; };
+		53B3B1142A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMultiPlatformDarwinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B3B1182A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMultiPlatformDarwinUITests.swift; sourceTree = "<group>"; };
+		53B3B11A2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMultiPlatformDarwinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		53B3B1282A65EE1E009EFF48 /* MultiPlatformSharedLib */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MultiPlatformSharedLib; path = ../../../Libs/MultiPlatformSharedLib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53B3B0F62A65ED7D009EFF48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53B3B12B2A65EEA8009EFF48 /* MultiPlatformSharedLib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53B3B1072A65ED7F009EFF48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53B3B1112A65ED7F009EFF48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53B3B0F02A65ED7D009EFF48 = {
+			isa = PBXGroup;
+			children = (
+				53B3B1272A65EE1E009EFF48 /* Packages */,
+				53B3B0FB2A65ED7E009EFF48 /* SwiftMultiPlatformDarwin */,
+				53B3B10D2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests */,
+				53B3B1172A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests */,
+				53B3B0FA2A65ED7E009EFF48 /* Products */,
+				53B3B1292A65EEA8009EFF48 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		53B3B0FA2A65ED7E009EFF48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53B3B0F92A65ED7E009EFF48 /* SwiftMultiPlatformDarwin.app */,
+				53B3B10A2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests.xctest */,
+				53B3B1142A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53B3B0FB2A65ED7E009EFF48 /* SwiftMultiPlatformDarwin */ = {
+			isa = PBXGroup;
+			children = (
+				53B3B0FC2A65ED7E009EFF48 /* SwiftMultiPlatformDarwinApp.swift */,
+				53B3B0FE2A65ED7E009EFF48 /* ContentView.swift */,
+				53B3B1002A65ED7F009EFF48 /* Assets.xcassets */,
+				53B3B1022A65ED7F009EFF48 /* SwiftMultiPlatformDarwin.entitlements */,
+				53B3B1032A65ED7F009EFF48 /* Preview Content */,
+			);
+			path = SwiftMultiPlatformDarwin;
+			sourceTree = "<group>";
+		};
+		53B3B1032A65ED7F009EFF48 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				53B3B1042A65ED7F009EFF48 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		53B3B10D2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests */ = {
+			isa = PBXGroup;
+			children = (
+				53B3B10E2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests.swift */,
+			);
+			path = SwiftMultiPlatformDarwinTests;
+			sourceTree = "<group>";
+		};
+		53B3B1172A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				53B3B1182A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests.swift */,
+				53B3B11A2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITestsLaunchTests.swift */,
+			);
+			path = SwiftMultiPlatformDarwinUITests;
+			sourceTree = "<group>";
+		};
+		53B3B1272A65EE1E009EFF48 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				53B3B1282A65EE1E009EFF48 /* MultiPlatformSharedLib */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		53B3B1292A65EEA8009EFF48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53B3B0F82A65ED7D009EFF48 /* SwiftMultiPlatformDarwin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53B3B11E2A65ED7F009EFF48 /* Build configuration list for PBXNativeTarget "SwiftMultiPlatformDarwin" */;
+			buildPhases = (
+				53B3B0F52A65ED7D009EFF48 /* Sources */,
+				53B3B0F62A65ED7D009EFF48 /* Frameworks */,
+				53B3B0F72A65ED7D009EFF48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftMultiPlatformDarwin;
+			packageProductDependencies = (
+				53B3B12A2A65EEA8009EFF48 /* MultiPlatformSharedLib */,
+			);
+			productName = SwiftMultiPlatformDarwin;
+			productReference = 53B3B0F92A65ED7E009EFF48 /* SwiftMultiPlatformDarwin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		53B3B1092A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53B3B1212A65ED7F009EFF48 /* Build configuration list for PBXNativeTarget "SwiftMultiPlatformDarwinTests" */;
+			buildPhases = (
+				53B3B1062A65ED7F009EFF48 /* Sources */,
+				53B3B1072A65ED7F009EFF48 /* Frameworks */,
+				53B3B1082A65ED7F009EFF48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53B3B10C2A65ED7F009EFF48 /* PBXTargetDependency */,
+			);
+			name = SwiftMultiPlatformDarwinTests;
+			productName = SwiftMultiPlatformDarwinTests;
+			productReference = 53B3B10A2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		53B3B1132A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53B3B1242A65ED7F009EFF48 /* Build configuration list for PBXNativeTarget "SwiftMultiPlatformDarwinUITests" */;
+			buildPhases = (
+				53B3B1102A65ED7F009EFF48 /* Sources */,
+				53B3B1112A65ED7F009EFF48 /* Frameworks */,
+				53B3B1122A65ED7F009EFF48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53B3B1162A65ED7F009EFF48 /* PBXTargetDependency */,
+			);
+			name = SwiftMultiPlatformDarwinUITests;
+			productName = SwiftMultiPlatformDarwinUITests;
+			productReference = 53B3B1142A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53B3B0F12A65ED7D009EFF48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					53B3B0F82A65ED7D009EFF48 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					53B3B1092A65ED7F009EFF48 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 53B3B0F82A65ED7D009EFF48;
+					};
+					53B3B1132A65ED7F009EFF48 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 53B3B0F82A65ED7D009EFF48;
+					};
+				};
+			};
+			buildConfigurationList = 53B3B0F42A65ED7D009EFF48 /* Build configuration list for PBXProject "SwiftMultiPlatformDarwin" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53B3B0F02A65ED7D009EFF48;
+			productRefGroup = 53B3B0FA2A65ED7E009EFF48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53B3B0F82A65ED7D009EFF48 /* SwiftMultiPlatformDarwin */,
+				53B3B1092A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests */,
+				53B3B1132A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53B3B0F72A65ED7D009EFF48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53B3B1052A65ED7F009EFF48 /* Preview Assets.xcassets in Resources */,
+				53B3B1012A65ED7F009EFF48 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53B3B1082A65ED7F009EFF48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53B3B1122A65ED7F009EFF48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53B3B0F52A65ED7D009EFF48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53B3B0FF2A65ED7E009EFF48 /* ContentView.swift in Sources */,
+				53B3B0FD2A65ED7E009EFF48 /* SwiftMultiPlatformDarwinApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53B3B1062A65ED7F009EFF48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53B3B10F2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53B3B1102A65ED7F009EFF48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53B3B11B2A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITestsLaunchTests.swift in Sources */,
+				53B3B1192A65ED7F009EFF48 /* SwiftMultiPlatformDarwinUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53B3B10C2A65ED7F009EFF48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53B3B0F82A65ED7D009EFF48 /* SwiftMultiPlatformDarwin */;
+			targetProxy = 53B3B10B2A65ED7F009EFF48 /* PBXContainerItemProxy */;
+		};
+		53B3B1162A65ED7F009EFF48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53B3B0F82A65ED7D009EFF48 /* SwiftMultiPlatformDarwin */;
+			targetProxy = 53B3B1152A65ED7F009EFF48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		53B3B11C2A65ED7F009EFF48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		53B3B11D2A65ED7F009EFF48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		53B3B11F2A65ED7F009EFF48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftMultiPlatformDarwin/SwiftMultiPlatformDarwin.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftMultiPlatformDarwin/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.swiftcommons.SwiftMultiPlatformDarwin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		53B3B1202A65ED7F009EFF48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftMultiPlatformDarwin/SwiftMultiPlatformDarwin.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftMultiPlatformDarwin/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.swiftcommons.SwiftMultiPlatformDarwin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		53B3B1222A65ED7F009EFF48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.swiftcommons.SwiftMultiPlatformDarwinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftMultiPlatformDarwin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftMultiPlatformDarwin";
+			};
+			name = Debug;
+		};
+		53B3B1232A65ED7F009EFF48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.swiftcommons.SwiftMultiPlatformDarwinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftMultiPlatformDarwin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftMultiPlatformDarwin";
+			};
+			name = Release;
+		};
+		53B3B1252A65ED7F009EFF48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.swiftcommons.SwiftMultiPlatformDarwinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftMultiPlatformDarwin;
+			};
+			name = Debug;
+		};
+		53B3B1262A65ED7F009EFF48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.swiftcommons.SwiftMultiPlatformDarwinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftMultiPlatformDarwin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53B3B0F42A65ED7D009EFF48 /* Build configuration list for PBXProject "SwiftMultiPlatformDarwin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53B3B11C2A65ED7F009EFF48 /* Debug */,
+				53B3B11D2A65ED7F009EFF48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53B3B11E2A65ED7F009EFF48 /* Build configuration list for PBXNativeTarget "SwiftMultiPlatformDarwin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53B3B11F2A65ED7F009EFF48 /* Debug */,
+				53B3B1202A65ED7F009EFF48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53B3B1212A65ED7F009EFF48 /* Build configuration list for PBXNativeTarget "SwiftMultiPlatformDarwinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53B3B1222A65ED7F009EFF48 /* Debug */,
+				53B3B1232A65ED7F009EFF48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53B3B1242A65ED7F009EFF48 /* Build configuration list for PBXNativeTarget "SwiftMultiPlatformDarwinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53B3B1252A65ED7F009EFF48 /* Debug */,
+				53B3B1262A65ED7F009EFF48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		53B3B12A2A65EEA8009EFF48 /* MultiPlatformSharedLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MultiPlatformSharedLib;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 53B3B0F12A65ED7D009EFF48 /* Project object */;
+}
