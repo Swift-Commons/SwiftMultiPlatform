@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-cross-ui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stackotter/swift-cross-ui",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a970a4dc51cd47e61d3ec8814b547252a0dc770e"
+      }
+    }
+  ],
+  "version" : 2
+}
