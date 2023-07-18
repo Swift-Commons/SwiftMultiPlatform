@@ -1,0 +1,124 @@
+name: "Swift Multi Platform CI"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/**"
+      - "Package.swift"
+      - "Source/**"
+      - "Tests/**"
+
+concurrency:
+  group: ${{ github.ref_name }}
+  cancel-in-progress: true
+jobs:
+  iOS:
+    runs-on: ${{ matrix.runsOn }}
+    env:
+      DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - xcode: "Xcode_14.3"
+            runsOn: macOS-13
+            name: "macOS 13, Xcode 14.3, Swift 5.8.0"
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: "cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin"
+      - name: ${{ matrix.name }}
+        run: xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=ios"
+  macOS:
+    runs-on: ${{ matrix.runsOn }}
+    env:
+      DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - xcode: "Xcode_14.3"
+            runsOn: macOS-13
+            name: "macOS 13, Xcode 14.3, Swift 5.8.0"
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: "cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin"
+      - name: ${{ matrix.name }}
+        run: xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=macOS"
+  Linux Desktop:
+    name: Linux Desktop
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image: swift:5.8.0-jammy
+    container:
+      image: ${{ matrix.image }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - name: ${{ matrix.image }}
+        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Desktop; swift build
+  Linux Web:
+    name: Linux Web
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image: swift:5.8.0-jammy
+    container:
+      image: ${{ matrix.image }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - name: ${{ matrix.image }}
+        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Web/VaporApp; swift build
+  Wasm:
+    name: Wasm
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image: ghcr.io/swiftwasm/carton:0.19.1
+    container:
+      image: ${{ matrix.image }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - name: ${{ matrix.image }}
+        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Libs/MultiPlatformSharedLib/; carton bundle
+  # Android:
+  #   name: Android
+  #   uses: Swift-Commons/swift-android-sdk/.github/workflows/sdks.yml@ci
+  #   strategy:
+  #     fail-fast: false
+  #   with:
+  #     target-repo: ${{ github.repository }}
+  #     checkout-hash: ${{ github.sha }}
+  Windows:
+    name: Windows
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - name: Setup
+        uses: compnerd/gha-setup-swift@main
+        with:
+          branch: swift-5.8-release
+          tag: 5.8-RELEASE
+      - name: Clone
+        uses: actions/checkout@v3
+      - name: SPM Windows Build
+        shell: cmd
+        run: |
+          cd ${{ github.workspace }}
+          cd Sources\SwiftMultiplatformApp\Examples\MultiPlatformProjectExample\Apps\Desktop
+          set SDKROOT=%SystemDrive%\Library\Developer\Platforms\Windows.platform\Developer\SDKs\Windows.sdk
+          %SystemDrive%\Library\Developer\Toolchains\unknown-Asserts-development.xctoolchain\usr\bin\swift-build.exe
