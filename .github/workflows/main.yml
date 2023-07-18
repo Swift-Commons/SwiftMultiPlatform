@@ -28,10 +28,8 @@ jobs:
             name: "macOS 13, Xcode 14.3, Swift 5.8.0"
     steps:
       - uses: actions/checkout@v3
-      - name: Build
-        run: "cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin"
       - name: ${{ matrix.name }}
-        run: xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=ios"
+        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin; xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=ios"
   macOS:
     runs-on: ${{ matrix.runsOn }}
     env:
@@ -46,10 +44,8 @@ jobs:
             name: "macOS 13, Xcode 14.3, Swift 5.8.0"
     steps:
       - uses: actions/checkout@v3
-      - name: Build
-        run: "cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin"
       - name: ${{ matrix.name }}
-        run: xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=macOS"
+        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin; xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=macOS"
   LinuxDesktop:
     name: Linux Desktop
     runs-on: ubuntu-latest
@@ -64,7 +60,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: ${{ matrix.image }}
-        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Desktop; swift build
+        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Desktop/GtkApp; swift build
   LinuxWeb:
     name: Linux Web
     runs-on: ubuntu-latest
@@ -119,6 +115,6 @@ jobs:
         shell: cmd
         run: |
           cd ${{ github.workspace }}
-          cd Sources\SwiftMultiplatformApp\Examples\MultiPlatformProjectExample\Apps\Desktop
+          cd Sources\SwiftMultiplatformApp\Examples\MultiPlatformProjectExample\Apps\Desktop\GtkApp
           set SDKROOT=%SystemDrive%\Library\Developer\Platforms\Windows.platform\Developer\SDKs\Windows.sdk
           %SystemDrive%\Library\Developer\Toolchains\unknown-Asserts-development.xctoolchain\usr\bin\swift-build.exe
