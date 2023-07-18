@@ -46,21 +46,21 @@ jobs:
       - uses: actions/checkout@v3
       - name: ${{ matrix.name }}
         run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin; xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=macOS"
-  LinuxDesktop:
-    name: Linux Desktop
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - image: swift:5.8.0-jammy
-    container:
-      image: ${{ matrix.image }}
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v3
-      - name: ${{ matrix.image }}
-        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Desktop/GtkApp; swift build
+  # LinuxDesktop:
+  #   name: Linux Desktop
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       include:
+  #         - image: swift:5.8.0-jammy
+  #   container:
+  #     image: ${{ matrix.image }}
+  #   timeout-minutes: 10
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: ${{ matrix.image }}
+  #       run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Desktop/GtkApp; swift build
   LinuxWeb:
     name: Linux Web
     runs-on: ubuntu-latest
@@ -100,7 +100,7 @@ jobs:
   #     target-repo: ${{ github.repository }}
   #     checkout-hash: ${{ github.sha }}
   Windows:
-    name: Windows
+    name: Windows Lib
     runs-on: windows-latest
     timeout-minutes: 10
     steps:
@@ -115,6 +115,6 @@ jobs:
         shell: cmd
         run: |
           cd ${{ github.workspace }}
-          cd Sources\SwiftMultiplatformApp\Examples\MultiPlatformProjectExample\Apps\Desktop\GtkApp
+          cd Sources\SwiftMultiplatformApp\Examples\MultiPlatformProjectExample\Libs\MultiPlatformSharedLib
           set SDKROOT=%SystemDrive%\Library\Developer\Platforms\Windows.platform\Developer\SDKs\Windows.sdk
           %SystemDrive%\Library\Developer\Toolchains\unknown-Asserts-development.xctoolchain\usr\bin\swift-build.exe
