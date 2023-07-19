@@ -17,6 +17,7 @@ Suggestions and tips for organizing the examples are welcome!
 | **Windows** | x86_64 | 5.8 | :heavy_check_mark: |
 | **Android** | Aarch64 | 5.8 | :heavy_minus_sign: |
 | **Ubuntu 22.04** | wasm32 | 5.8 | :heavy_check_mark: |
+
 <br/> <br/>
 
 # Project Structure
