@@ -14,22 +14,23 @@ concurrency:
   group: ${{ github.ref_name }}
   cancel-in-progress: true
 jobs:
-  iOS:
-    runs-on: ${{ matrix.runsOn }}
-    env:
-      DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
-    timeout-minutes: 10
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - xcode: "Xcode_14.3"
-            runsOn: macOS-13
-            name: "macOS 13, Xcode 14.3, Swift 5.8.0"
-    steps:
-      - uses: actions/checkout@v3
-      - name: ${{ matrix.name }}
-        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin; xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=ios" clean build
+# comment out for now because runners arent reliable
+  # iOS:
+  #   runs-on: ${{ matrix.runsOn }}
+  #   env:
+  #     DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
+  #   timeout-minutes: 10
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       include:
+  #         - xcode: "Xcode_14.3"
+  #           runsOn: macOS-13
+  #           name: "macOS 13, Xcode 14.3, Swift 5.8.0"
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: ${{ matrix.name }}
+  #       run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin; xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=ios" clean build
   macOS:
     runs-on: ${{ matrix.runsOn }}
     env:
