@@ -3,7 +3,7 @@ name: "Swift Multi Platform CI"
 on:
   push:
     branches:
-      - main
+      - main 
     paths:
       - ".github/workflows/**"
       - "Package.swift"
