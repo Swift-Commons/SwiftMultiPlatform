@@ -1,0 +1,121 @@
+name: "Swift Multi Platform CI"
+
+on:
+  push:
+    branches:
+      - main 
+    paths:
+      - ".github/workflows/**"
+      - "Package.swift"
+      - "Source/**"
+      - "Tests/**"
+
+concurrency:
+  group: ${{ github.ref_name }}
+  cancel-in-progress: true
+jobs:
+# comment out for now because runners arent reliable
+  # iOS:
+  #   runs-on: ${{ matrix.runsOn }}
+  #   env:
+  #     DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
+  #   timeout-minutes: 10
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       include:
+  #         - xcode: "Xcode_14.3"
+  #           runsOn: macOS-13
+  #           name: "macOS 13, Xcode 14.3, Swift 5.8.0"
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: ${{ matrix.name }}
+  #       run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin; xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=ios" clean build
+  macOS:
+    runs-on: ${{ matrix.runsOn }}
+    env:
+      DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - xcode: "Xcode_14.3"
+            runsOn: macOS-13
+            name: "macOS 13, Xcode 14.3, Swift 5.8.0"
+    steps:
+      - uses: actions/checkout@v3
+      - name: ${{ matrix.name }}
+        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin; xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=macOS" clean build
+  LinuxDesktop:
+    name: Linux Desktop
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image: swift:5.8.0-jammy
+    container:
+      image: ${{ matrix.image }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - name: ${{ matrix.image }}
+        run: apt update && apt install -y libgtk-3-dev; cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Desktop/GtkApp; swift build -c release
+  LinuxWeb:
+    name: Linux Web
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image: swift:5.8.0-jammy
+    container:
+      image: ${{ matrix.image }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - name: ${{ matrix.image }}
+        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Web/VaporApp; swift build
+  Wasm:
+    name: Wasm
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image: ghcr.io/swiftwasm/carton:0.19.1
+    container:
+      image: ${{ matrix.image }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - name: ${{ matrix.image }}
+        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Web/WasmApp/; carton bundle
+  # Android:
+  #   name: Android
+  #   uses: Swift-Commons/swift-android-sdk/.github/workflows/sdks.yml@ci
+  #   strategy:
+  #     fail-fast: false
+  #   with:
+  #     target-repo: ${{ github.repository }}
+  #     checkout-hash: ${{ github.sha }}
+  Windows:
+    name: Windows Lib
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - name: Setup
+        uses: compnerd/gha-setup-swift@main
+        with:
+          branch: swift-5.8-release
+          tag: 5.8-RELEASE
+      - name: Clone
+        uses: actions/checkout@v3
+      - name: SPM Windows Build
+        shell: cmd
+        run: |
+          cd ${{ github.workspace }}
+          cd Sources\SwiftMultiplatformApp\Examples\MultiPlatformProjectExample\Libs\MultiPlatformSharedLib
+          set SDKROOT=%SystemDrive%\Library\Developer\Platforms\Windows.platform\Developer\SDKs\Windows.sdk
+          %SystemDrive%\Library\Developer\Toolchains\unknown-Asserts-development.xctoolchain\usr\bin\swift-build.exe
