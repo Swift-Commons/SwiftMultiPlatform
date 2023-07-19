@@ -45,22 +45,22 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: ${{ matrix.name }}
-        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin; xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=macOS"
-  # LinuxDesktop:
-  #   name: Linux Desktop
-  #   runs-on: ubuntu-latest
-  #   strategy:
-  #     fail-fast: false
-  #     matrix:
-  #       include:
-  #         - image: swift:5.8.0-jammy
-  #   container:
-  #     image: ${{ matrix.image }}
-  #   timeout-minutes: 10
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: ${{ matrix.image }}
-  #       run: apt update && apt install -y libgtk-3-dev clang; cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Desktop/GtkApp; swift build
+        run: cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Darwin/SwiftMultiPlatformDarwin; xcodebuild -project "SwiftMultiPlatformDarwin.xcodeproj" -scheme "SwiftMultiPlatformDarwin" -destination "platform=macOS" clean build
+  LinuxDesktop:
+    name: Linux Desktop
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image: swift:5.8.0-jammy
+    container:
+      image: ${{ matrix.image }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - name: ${{ matrix.image }}
+        run: apt update && apt install -y libgtk-3-dev; cd Sources/SwiftMultiplatformApp/Examples/MultiPlatformProjectExample/Apps/Desktop/GtkApp; swift build -c release
   LinuxWeb:
     name: Linux Web
     runs-on: ubuntu-latest
