@@ -2,7 +2,7 @@
 
 This repository serves as an example on how to write Swift code that compiles and is shared on multiple platforms.
 <br/> <br/>
-Although this might not present industry standard best practices for a production application, it does provide a starting point on reasoning how one can leverage Swift on multiple platforms, outside of Apple's Ecosystem.
+Although this might not present industry standard best practices for a production application, it does provide a starting point for reasoning on how one can leverage Swift on multiple platforms, outside of Apple's ecosystem.
 <br/> <br/>
 Suggestions and tips for organizing the examples are welcome!
 <br/> <br/>
