@@ -8,14 +8,15 @@ Suggestions and tips for organizing the examples are welcome!
 <br/> <br/>
 
 # CI 
+[![macOS](https://github.com/hggz/SwiftMultiPlatform/actions/workflows/main.yml/badge.svg)](https://github.com/hggz/SwiftMultiPlatform/actions/workflows/main.yml)
 
 | Platform | **Architecture** | **Swift Version** | **Build** |
 |---|:---:|:---:|:---:|
-| **macOS**        | x86_64 | 5.8 | Pending |
-| **Ubuntu 22.04** | x86_64 | 5.8 | Pending |
-| **Windows** | x86_64 | 5.8 | Pending |
+| **macOS**        | x86_64 | 5.8 | Active |
+| **Ubuntu 22.04** | x86_64 | 5.8 | Active |
+| **Windows** | x86_64 | 5.8 | Active |
 | **Android** | Aarch64 | 5.8 | Pending
-| **Ubuntu 22.04** | wasm32 | 5.8 | Pending|
+| **Ubuntu 22.04** | wasm32 | 5.8 | Active|
 <br/> <br/>
 
 # Project Structure
