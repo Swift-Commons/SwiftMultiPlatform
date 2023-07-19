@@ -8,7 +8,7 @@ Suggestions and tips for organizing the examples are welcome!
 <br/> <br/>
 
 # CI 
-[![macOS](https://github.com/hggz/SwiftMultiPlatform/actions/workflows/main.yml/badge.svg)](https://github.com/hggz/SwiftMultiPlatform/actions/workflows/main.yml)
+[![Swift Multi Platform CI](https://github.com/Swift-Commons/SwiftMultiPlatform/actions/workflows/main.yml/badge.svg)](https://github.com/Swift-Commons/SwiftMultiPlatform/actions/workflows/main.yml)
 
 | Platform | **Architecture** | **Swift Version** | **Build** |
 |---|:---:|:---:|:---:|
