@@ -12,11 +12,11 @@ Suggestions and tips for organizing the examples are welcome!
 
 | Platform | **Architecture** | **Swift Version** | **Build** |
 |---|:---:|:---:|:---:|
-| **macOS**        | x86_64 | 5.8 | Active |
-| **Ubuntu 22.04** | x86_64 | 5.8 | Active |
-| **Windows** | x86_64 | 5.8 | Active |
-| **Android** | Aarch64 | 5.8 | Pending
-| **Ubuntu 22.04** | wasm32 | 5.8 | Active|
+| **macOS**        | x86_64 | 5.8 | :heavy_check_mark: |
+| **Ubuntu 22.04** | x86_64 | 5.8 | :heavy_check_mark: |
+| **Windows** | x86_64 | 5.8 | :heavy_check_mark: |
+| **Android** | Aarch64 | 5.8 | :heavy_minus_sign: |
+| **Ubuntu 22.04** | wasm32 | 5.8 | :heavy_check_mark: |
 <br/> <br/>
 
 # Project Structure
